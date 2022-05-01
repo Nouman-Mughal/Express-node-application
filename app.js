@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 /*setting up the default mongoose connection*/
+var dev_db_url =
+  "mongodb+srv://noman:noman123@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true";
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
+
 mongoose.connect(
   "mongodb+srv://noman:noman123@cluster0.7244f.mongodb.net/local_library?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true }
